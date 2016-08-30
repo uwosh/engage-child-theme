@@ -5,6 +5,7 @@
 /*** Custom Widgets ***/
 
 include_once 'widgets/top-menu.php';
+include_once 'widgets/custom-search.php';
 
 // Custom JavaScript
 function uwo_theme_enqueue_script(){

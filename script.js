@@ -10,6 +10,12 @@
     $(".big-menu").hover(function(){
       $(".dropdown-content").fadeToggle("medium");
     });
+
+    // Google Custom Search Customizing
+    $(".eltdf-search-field").attr("name", "q");
+    $(".eltdf-form-holder .eltdf-column-left").prepend("<input type='hidden' name='cx' value='007334596040304417000:r-k6f0v_yw8' /><input type='hidden' name='ie' value='UTF-8' />");
+    $(".eltdf-search-submit").attr("name", "sa");
+    $(".eltdf-search-menu-holder").attr("action", "http://" + document.domain + "/search-results");
   });
 
   $( window ).load(function() {
