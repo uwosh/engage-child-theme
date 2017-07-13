@@ -39,5 +39,22 @@
             </a>
         <?php } ?>
 
+<!-- Start of retrieving single value from Engage DB -->
+		<?php
+		//recently added
+		global $wpdb;
+		$results = $wpdb->get_var( 'SELECT background FROM ' . $wpdb->prefix . 'shadowless_background WHERE id = 1' );
+		if ($results == 1 && is_front_page()){
+		?>
+			<script type="text/javascript">
+				jQuery(document).ready(function(){
+					jQuery(".eltdf-psc-slide").addClass('no-background');
+				});
+			</script>
+		<?php
+		}
+		?>
+<!-- End of retrieval -->
+
         <div class="eltdf-content" <?php readanddigest_content_elem_style_attr(); ?>>
             <div class="eltdf-content-inner">

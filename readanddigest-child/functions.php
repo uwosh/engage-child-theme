@@ -1,6 +1,98 @@
 <?php
 
 /*** Child Theme Function  ***/
+//Check & Create table to DB depending on whether it exist or not
+function create_engage_table(){
+    global $wpdb;
+
+    $shadowless_background_table = $wpdb->prefix . 'shadowless_background';
+    //Checking if table exist
+    if($wpdb->get_var('SHOW TABLES LIKE ' . $shadowless_background_table) != $shadowless_background_table){
+        //If table doesn't exist, create one
+        $charset_collate = $wpdb->get_charset_collate();
+        $sql = "CREATE TABLE $shadowless_background_table(
+        id INT NOT NULL AUTO_INCREMENT,
+        background TINYINT(1) NOT NULL DEFAULT '0',
+        PRIMARY KEY  (id)
+        ) $charset_collate;";
+
+        require_once( ABSPATH . 'wp-admin/includes/upgrade.php');
+        dbDelta($sql);
+    }
+}
+
+function create_engage_table_data(){
+    global $wpdb;
+    $shadowless_background_table = $wpdb->prefix . 'shadowless_background';
+
+        $wpdb->insert($shadowless_background_table, array(
+            'background' => 0
+            )
+        );
+}
+
+//Calling engage's functions
+add_action('after_switch_theme', 'create_engage_table');
+add_action('after_switch_theme', 'create_engage_table_data');
+
+// Engage's settings page
+function engage_register_options_page() {
+	add_options_page('Engage Options', 'Engage Options', 4, 'engage-options', 'engage_options_page');
+}
+add_action('admin_menu', 'engage_register_options_page');
+
+function engage_options_page(){
+?>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <div class="wrap">
+        <h3>Engage Options</h3>
+		<p>Remove gradient background of <i>'Home'</i> page by checking the checkbox then <i>'Update Background'</i> or keep gradient background by unchecking the checkbox then <i>'Update Background'</i>. (If page has gradient/light background with checkbox checked/unchecked, follow given instruction to change it the way you want)</p>
+        <form action="https://engage.wpdev.uwosh.edu/" method="POST">
+            <div id="checkbox-container">
+                Light Background: <input type="checkbox" id="backSwap" name="new_background" />
+            </div><br />
+
+            <input type="submit" name="submit" value="Update Background" class="button" />
+        </form>
+        <script>
+            var checkboxValue = JSON.parse(localStorage.getItem('checkboxValue')) || {}
+            var $checkbox = $("#checkbox-container :checkbox");
+
+            $checkbox.on("change", function() {
+                $checkbox.each(function() {
+                    checkboxValue[this.id] = this.checked;
+                });
+            	localStorage.setItem("checkboxValue", JSON.stringify(checkboxValue));
+            });
+
+        	//on page load
+        	$.each(checkboxValue, function(key, value) {
+           		$("#" + key).prop('checked', value);
+        	});
+        </script>
+    </div>
+<?php
+}
+
+//Updating Engage table's 'background' data value
+function update_background_value() {
+    global $wpdb;
+    $shadowless_background_table = $wpdb->prefix . 'shadowless_background';
+    
+    if (isset($_POST['submit']) && isset($_POST['new_background']) == 'checked'){
+        $wpdb->update($shadowless_background_table, array('background' => '1'), array('id' => 1));
+    }
+    elseif (isset($_POST['submit']) && isset($_POST['new_background']) == ''){
+        $wpdb->update($shadowless_background_table, array('background' => '0'), array('id' => 1));
+    }
+}
+add_action('init', 'update_background_value');
+
+//Alerting successful updated background message
+if (isset($_POST['submit'])){
+	echo "<script type='text/javascript'>alert('You have successfully updated the background.');</script>";
+}
 
 // Custom Widgets
 include_once 'widgets/top-menu.php';
