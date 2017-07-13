@@ -48,7 +48,7 @@ function engage_options_page(){
     <div class="wrap">
         <h3>Engage Options</h3>
 		<p>Remove gradient background of <i>'Home'</i> page by checking the checkbox then <i>'Update Background'</i> or keep gradient background by unchecking the checkbox then <i>'Update Background'</i>. (If page has gradient/light background with checkbox checked/unchecked, follow given instruction to change it the way you want)</p>
-        <form action="https://engage.wpdev.uwosh.edu/" method="POST">
+        <form action="<?php echo get_site_url(); ?>" method="POST">
             <div id="checkbox-container">
                 Light Background: <input type="checkbox" id="backSwap" name="new_background" />
             </div><br />
@@ -79,7 +79,7 @@ function engage_options_page(){
 function update_background_value() {
     global $wpdb;
     $shadowless_background_table = $wpdb->prefix . 'shadowless_background';
-    
+
     if (isset($_POST['submit']) && isset($_POST['new_background']) == 'checked'){
         $wpdb->update($shadowless_background_table, array('background' => '1'), array('id' => 1));
     }
