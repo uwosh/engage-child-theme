@@ -63,252 +63,249 @@ li.no-background::after{
   background: none !important;
 }
 
-/**
-* FOOTER
-**/
-#main-footer {
-  background-color: #fff !important;
+/** BEGIN FOOTER **/
+#main-footer{
+  background-color:#fff!important
 }
-#portal-footer {
-  text-align: center;
-  background-color: #444;
-  color: #fff;
+#uwo-footer{
+  text-align:left;
+  background-color:#b0b0b0;
+  clear:both;
+  color:#444;
+  font-size:15px
 }
-#footer-bottom {
-  padding-top: 0;
-  background-color: #b0b0b0;
-  line-height: 1.7em;
+#footer-top{
+  background-color:#fec424;
+  color:#444;
+  text-align:center;
+  font-weight:700;
+  font-size:16px;
+  padding:12px 0
 }
-#footer {
-  margin: auto;
-  clear: both;
-  height: 178px;
-  padding-left: 30px;
-  padding-right: 30px;
-  background-color: #b0b0b0;
-  font-size: 13px;
-  color: #444; }
-
-#uwo-footer {
-  text-align: left;
-  font-style: normal;
-  font-family: Helvetica, Arial, Verdana, sans-serif; }
-
-#uwo-footer a {
-  font-family: Helvetica, Arial, Verdana, sans-serif;
-  font-size: 13px;
-  text-decoration: none;
-  color: #444; }
-
-#uwo-footer h2 {
-  color: #494949;
-  font-size: 25px;
-  font-family: Helvetica, Arial, Verdana,sans-serif;
-  font-weight: normal;
-  margin-bottom: 10px;
-  letter-spacing: 0.03em; }
-
-#uwo-footer h2 a {
-  color: #494949;
-  font-size: 25px;
-  font-family: "gnuolane",sans-serif;
-  font-weight: normal;
-  margin-bottom: 10px; }
-
-#footer-column-1, #footer-column-2, #footer-column-3 {
-  float: left;
-  margin: 20px 0 0 0; }
-
-#footer-column-1 {
-  width: 30%; }
-
-#footer-column-2 {
-  width: 35%; }
-
-#footer-column-3 {
-  width: 35%; }
-
-#footer-column-1 ul {
-  float: left;
-  list-style-type: none;
-  padding-left: 0;
-  padding-right: 20px;
-  margin-top: 0;
-  margin-left: 0;
+#footer-top span{
+  padding:0 10px
 }
-
-address.vcard { line-height: 18px; }
-
-#uwo-everywhere img {
-  position: relative;
-  right: 20px;
-  margin: 0 !important; }
-
-#footer-column-1 ul li {
-  display: block;
-  padding-bottom: 5px; }
-
-#uwo-everywhere {
-  margin-top: 15px;
-  padding: 0;
-  margin-bottom: px; }
-
-#uwo-everywhere h2 {
-  padding-bottom: 5px; }
-
-#footer-column-2 p {
-  position: relative;
-  bottom: 12px; }
-
-#meet-uw-oshkosh {
-  padding-bottom: 5px; }
-
-#uwo-footer-map {
-  text-align: center;
-  margin-left: 40px; }
-
-.uwo-connect-icons {
-  margin-right: 18px;
-  margin-top: 10px; }
-
-#footer-logos {
-  clear: both;
-  text-align: center;
-  margin-bottom: 20px;
-  width: 100%;
-  white-space: nowrap; }
-
-#footer-logos img {
-  margin-right: 20px;
-  margin-top: 40px !important; }
-
-#uwo-footer-mobile-icon {
-  float: right;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 46px; }
-
-#uwo-tagline {
-  text-align: center; }
-
-#uwo-tagline p {
-  font-size: .7em;
-  color: #919191; }
-
-#uwo-tagline h2 {
-  margin-bottom: 0;
-  line-height: 130%; }
-
-.pull-left {
-  float: left; }
-
-.app-icon {
-  width: 32px;
-  height: 32px; }
-
-.wismap {
-  width: 124px;
-  margin-right: 10px; }
-
-#address {
-  margin-top: 20px; }
-
-#sitemap {
-  margin-top: 20px;
-  margin-right: 25px; }
-
-#mobile-emergency {
-  float: left;
-  width: 170px;
-  margin-top: 30px; }
-#college-portrait {
-  margin-top: 61px;
+.grid-container{
+  width:100%
 }
-#footer-column-3 a img {
-  margin-right: 3px;
+.grid-container *{
+  box-sizing:border-box
 }
-#footerSocialLinks {
-  margin-bottom: 20px;
+.row:after,.row:before{
+  content:"";
+  display:table;
+  clear:both
 }
-#footerSocialLinks li {
-  display: inline;
-  margin-right: 16px;
+.col{
+  float:left;
+  min-height:1px;
+  width:25%;
+  padding:12px
 }
-.social-icon {
-  height: 24px;
-}
-.list-block li {
-  display: block; }
-
-.img-block {
-  display: block; }
-
-address {
-  font-style: normal; }
-
-  @media only screen and (max-width: 1100px) {
-  /* rules defined inside here are only applied to browsers that support CSS media queries and the browser window is 1100px or smaller */
-  #footer-column-1 {
-    width: 50%; }
-
-  #footer-column-2 {
-    width: 50%; }
-
-  #footer-column-3 {
-    width: 100%;
-    text-align: center;}
-}
-@media only screen and (max-width: 980px) {
-  /* rules defined inside here are only applied to browsers that support CSS media queries and the browser window is 980px or smaller */
-  #footer-column-1 {
-    width: 100%;
-    text-align: left;}
-
-  #footer-column-2 {
-    width: 100%;
-    text-align: left;}
-
-  #footer-column-3 {
-    width: 100%;
-    text-align: left;}
-}
-@media only screen and (max-width: 480px){
-  /* rules defined inside here are only applied to browsers that support CSS media queries and the browser window is 480px or smaller */
-  #footer-column-1 {
-    width: 100%;
-    text-align: left;}
-
-  .wismap {
-    display: none;
+@media only screen and (max-width:820px){
+  .col{
+      width:50%
   }
-
-  #footer-column-2 {
-    width: 100%;
-    text-align: left;}
-
-  #footer-column-3 {
-    width: 100%;
-    text-align: left;}
 }
-.desaturate {
-  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.4444 0.4444 0.4444 0 0 0.4444 0.4444 0.4444 0 0 0.4444 0.4444 0.4444 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+ */
-  filter: gray; /* IE6-9 */
-  -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
-  -webkit-transition: all 0.6s ease; /* Fade to color for Chrome and Safari */
-  -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+@media only screen and (max-width:480px){
+  .col{
+      width:100%
+  }
 }
-
-.desaturate:hover {
-  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
-  filter: none;
-  -webkit-filter: grayscale(0%);
+#footer-body{
+  background-color:#b0b0b0;
+  padding:45px 5%
 }
-.container {
-	position: relative;
-	width: 80%;
-	max-width: 1080px;
-	margin: auto;
+#footer-body a{
+  color:#444;
+  font-style:normal
 }
-/**
-*END FOOTER
-**/
+#footer-body ul{
+  list-style-type:none
+}
+#footer-column-1,#footer-column-2,#footer-column-3,#footer-column-4{
+  float:left
+}
+.footer-column-header{
+  margin-bottom:5px;
+  font-weight:700
+}
+#footer-column-1 .wismap{
+  width:40%
+}
+#footer-column-1 p{
+  padding-left:40%;
+  margin-left:10px
+}
+#footer-address{
+  width:60%;
+  float:right;
+  padding-left:10px
+}
+#footer-address ul{
+  line-height:1.75em;
+  margin:0
+}
+#column-2-header{
+  padding-left:54px
+}
+.quick-links{
+  padding-bottom:10px
+}
+.quick-links::after{
+  content:"";
+  display:table;
+  clear:both
+}
+#footer-column-2,#footer-column-3{
+  padding-left:60px
+}
+#mobile-emergency i{
+  margin-right:15px;
+  float:left;
+  width:40px;
+  text-align:center
+}
+#mobile-emergency i:hover{
+  color:#fec424
+}
+#mobile-emergency .fa-mobile{
+  font-size:60px
+}
+#mobile-emergency .fa-exclamation-triangle{
+  font-size:40px;
+  padding-top:10px
+}
+#mobile-emergency p{
+  height:65px;
+  margin-bottom:15px
+}
+#mobile-emergency p a{
+  vertical-align:sub;
+  line-height:1
+}
+#sitemap ul{
+  margin:0;
+  line-height:1.75
+}
+#sitemap ul li:hover{
+  text-decoration:underline
+}
+#footer-column-4 .image-wrapper{
+  display:inline-block;
+  padding-bottom:10px
+}
+#footer-column-4 .image-wrapper .accredited-img{
+  padding-right:10px
+}
+#footer-column-4 #footer-uw-logo{
+  padding-right:0
+}
+#footer-bottom{
+  overflow:hidden;
+  background-color:#444;
+  padding:0;
+  width:100%
+}
+#footer-bottom #footer-copy{
+  float:left;
+  color:#b0b0b0;
+  font-size:15px;
+  padding-top:19px;
+  padding-left:10px
+}
+#footer-bottom #footer-social{
+  float:right
+}
+#footer-bottom #footer-social a{
+  display:table-cell;
+  text-align:center;
+  color:#b0b0b0;
+  padding:15px
+}
+#footer-bottom #footer-social .fa-facebook:hover{
+  color:#3b5998
+}
+#footer-bottom #footer-social .fa-twitter:hover{
+  color:#1da1f2
+}
+#footer-bottom #footer-social .fa-instagram:hover{
+  color:#f56040
+}
+#footer-bottom #footer-social .fa-youtube-play:hover{
+  color:#cd201f
+}
+#footer-bottom #footer-social .fa-linkedin:hover{
+  color:#0077b5
+}
+#footer-bottom #footer-social .fa-pinterest-p:hover{
+  color:#bd081c
+}
+#footer-bottom #footer-social .fa-flickr:hover{
+  color:#8032b0
+}
+@media only screen and (max-width:1025px){
+  #footer-column-1 p{
+      padding-left:20px;
+      margin-left:0
+  }
+  #footer-column-1 .wismap{
+      display:none
+  }
+  #footer-column-1 #footer-address{
+      padding-left:20px;
+      width:100%
+  }
+  #footer-column-2{
+      padding-left:10px;
+      padding-right:30px
+  }
+  #footer-column-3{
+      padding-left:20px
+  }
+}
+@media only screen and (max-width:640px){
+  #footer-column-1,#footer-column-2,#footer-column-3,#footer-column-4{
+      text-align:left;
+      padding:0 0 15px
+  }
+  #footer-column-1 #footer-address,#footer-column-1 p,#footer-column-2 #footer-address,#footer-column-2 p,#footer-column-3 #footer-address,#footer-column-3 p,#footer-column-4 #footer-address,#footer-column-4 p{
+      padding-left:0
+  }
+  #footer-column-1 ul,#footer-column-2 ul,#footer-column-3 ul,#footer-column-4 ul{
+      margin:0
+  }
+  #footer-body{
+      padding-bottom:0
+  }
+  #footer-column-1{
+      height:160px
+  }
+  #footer-column-2 p{
+      width:205px
+  }
+  #footer-column-4 img{
+      padding:35px 14% 35px 0
+  }
+  #footer-column-4 #footer-accredited{
+      padding-left:0
+  }
+  #footer-bottom #footer-social a{
+      padding:15px 10px
+  }
+}
+@media only screen and (max-width:540px){
+  #footer-bottom #footer-social{
+      float:left
+  }
+}
+.desaturate{
+  -webkit-backface-visibility:hidden;
+  backface-visibility:hidden;
+  filter:grayscale(100%);
+  transition:all .6s ease
+}
+.desaturate:hover{
+  filter:grayscale(0)
+}
+/** END FOOTER **/
