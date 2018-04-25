@@ -38,7 +38,7 @@ class UWO_Top_Menu extends WP_Widget {
 	 * @param array $instance Saved values from database.
 	 */
 	public function widget( $args ) {
-		echo "
+		?>
 		<div class='top-menu'>
 			<a href='http://www.uwosh.edu/about-uw-oshkosh/'>About</a>
 			<a href='http://www.uwosh.edu/academics/'>Academics</a>
@@ -64,6 +64,7 @@ class UWO_Top_Menu extends WP_Widget {
 					<a href='http://www.uwosh.edu/titanjobs'>Titan Jobs</a>
 				</div>
 			</div>
-		</div>";
+		</div>
+		<?php
 	}
 } // class My_Widget

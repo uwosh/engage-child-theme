@@ -42,6 +42,11 @@ Template: readanddigest
   font-size: 13px;
   letter-spacing: 1px;
 }
+@media only screen and (max-width: 1200px) {
+  .top-menu a {
+    font-size: 10px !important;
+  }
+}
 .top-menu a:hover{
   color: #fec424 !important;
 }
